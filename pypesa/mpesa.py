@@ -426,7 +426,7 @@ class Mpesa:
         try:
             return requests.get(
                 self.urls.transaction_status,
-                json=transaction_query,
+                params=transaction_query,
                 headers=self.default_headers(),
                 verify=True,
             ).json()
